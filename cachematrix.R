@@ -31,7 +31,7 @@ cacheSolve <- function(cache_x, ...) {
 ## If the inverse matrix has not been calculated, it does so here    
     
     make_inverse <- cache_x$get()
-    inv <- solve(make_inverse)
+    inv <- solve(make_inverse, ...)
     cache_x$setInverse(inv)
     inv
 }
